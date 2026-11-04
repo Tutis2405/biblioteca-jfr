@@ -4,10 +4,9 @@ Sitio estático para el catálogo y los préstamos de la biblioteca del Colegio 
 
 ## Antes de publicar
 
-1. En `app.js`, pega el `firebaseConfig` de la app web de Firebase.
-2. En `app.js`, cambia `ADMIN_EMAIL` por el correo real del bibliotecario.
-3. Conserva el `logo.jpg` original en esta misma carpeta. El ZIP recibido no lo traía, así que no fue reemplazado ni inventado.
-4. Copia el contenido de `firestore.rules` en Firebase Console → Firestore Database → Reglas y publícalo. Ese archivo es de configuración de Firebase, no debe subirse al repositorio público.
+1. En `app.js`, cambia `ADMIN_EMAIL` por el correo real del bibliotecario.
+2. El `firebaseConfig` de la app web `biblioteca-jfr-web` ya quedó conectado.
+3. Copia el contenido de `firestore.rules` en Firebase Console → Firestore Database → Reglas y publícalo. Ese archivo es de configuración de Firebase, no debe subirse al repositorio público.
 
 ## Firebase
 

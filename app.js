@@ -3,8 +3,8 @@ import{getAuth,onAuthStateChanged,signInWithEmailAndPassword,createUserWithEmail
 import{getFirestore,doc,collection,query,where,orderBy,limit,onSnapshot,getDoc,getDocs,setDoc,deleteField,writeBatch}from'https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore.js';
 
 /* PEGA AQUÍ la config de tu proyecto de Firebase y el correo del bibliotecario. */
-const firebaseConfig={apiKey:'',authDomain:'',projectId:'',appId:''};
-const ADMIN_EMAIL='bibliotecario@ejemplo.com'; // el mismo que pusiste en firestore.rules
+const firebaseConfig={apiKey:'AIzaSyADaFgt6OflrMmELMphMN6sNJsXO7AZkfU',authDomain:'biblioteca-jfr.firebaseapp.com',projectId:'biblioteca-jfr',appId:'1:738180478721:web:7ec803f11d769a3dfacd00'};
+const ADMIN_EMAIL='biblioteca.restrepista@ctjfr.edu.co'; // el mismo que está en firestore.rules
 
 const $=s=>document.querySelector(s);
 if(!firebaseConfig.apiKey){$('#app').innerHTML='<section class="box"><h2>La biblioteca está casi lista</h2><p>Falta conectar este sitio con el proyecto de Firebase.</p><div class="note">Pega el <b>firebaseConfig</b> de tu app web en <b>app.js</b> y cambia también <b>ADMIN_EMAIL</b> por el correo del bibliotecario. Después publica las reglas que vienen fuera del sitio.</div></section>';throw new Error('Falta firebaseConfig')}
