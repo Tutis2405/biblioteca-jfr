@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#123c4a">
+<meta name="description" content="Catálogo y préstamos de la biblioteca del Colegio Técnico José Félix Restrepo I.E.D.">
+<title>Biblioteca JFR | Colegio Técnico José Félix Restrepo</title>
+<style>
+:root{--b:#1c3faa;--bd:#0f2468;--s:#e9edf6;--ink:#18203a;--mut:#5d6580;--ok:#17803d;--wa:#c27a00;--no:#b3261e}
+*{box-sizing:border-box;margin:0}
+body{font:16px/1.5 system-ui,sans-serif;color:var(--ink);background:#f4f6fb}
+h1,h2,h3,.brand b{font-family:"Palatino Linotype",Palatino,"Book Antiqua",serif;color:var(--bd)}
+:focus-visible{outline:3px solid #f0b429;outline-offset:2px}
+header{background:#fff;border-bottom:4px solid var(--b);position:sticky;top:0;z-index:5;display:flex;gap:10px 16px;align-items:center;padding:8px 16px;flex-wrap:wrap}
+.brand{display:flex;gap:10px;align-items:center;flex:1;min-width:240px;cursor:pointer}
+.brand img{height:54px}
+.brand b{display:block;font-size:1.05rem;line-height:1.2}
+small{color:var(--mut)}
+nav,.tabs{display:flex;gap:6px;flex-wrap:wrap}
+button{font:inherit;border:0;border-radius:8px;padding:8px 14px;cursor:pointer;background:var(--b);color:#fff}
+button:hover{background:var(--bd)}
+button.g{background:var(--s);color:var(--bd)}button.g:hover{background:#d5dcf0}
+button.r{background:var(--no)}button.r:hover{background:#8a1a14}
+.sm{padding:4px 10px;font-size:.85rem}
+.tabs{margin-bottom:14px}.tabs .on{background:var(--bd);color:#fff}
+main{max-width:1000px;margin:auto;padding:16px}
+.hero{padding:26px 4px 18px}
+.hero h1{font-size:2.1rem;line-height:1.15}
+.hero p{color:var(--mut);margin:4px 0 14px}
+input,select{font:inherit;width:100%;padding:9px 12px;border:1px solid #b9c3dc;border-radius:8px;background:#fff}
+.hero input{font-size:1.15rem;padding:14px 16px;border:2px solid var(--b)}
+.row{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}.row>*{flex:1;min-width:140px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:12px}
+.card{background:#fff;border:1px solid #d5dcee;border-left:9px solid var(--b);border-radius:3px 10px 10px 3px;padding:12px 14px;display:flex;flex-direction:column;gap:5px}
+.card.ok{border-left-color:var(--ok)}.card.wa{border-left-color:var(--wa)}.card.no{border-left-color:var(--no)}
+.card h3{font-size:1.08rem;line-height:1.25}
+.tag{display:inline-block;font-size:.82rem;font-weight:600;padding:2px 10px;border-radius:99px;align-self:flex-start}
+.t-ok{background:#dff5e6;color:var(--ok)}.t-wa{background:#fff0d6;color:#8a5600}.t-no{background:#fde4e2;color:var(--no)}
+.box{background:#fff;border:1px solid #d5dcee;border-radius:10px;padding:18px;max-width:420px;margin:auto}
+.box label{display:block;margin-top:10px;font-size:.9rem;color:var(--mut)}
+.note{background:#fff8e1;border-left:4px solid #f0b429;padding:8px 12px;border-radius:6px;font-size:.9rem;margin-top:12px}
+.scroll{overflow-x:auto;border:1px solid #d5dcee;border-radius:10px}
+table{width:100%;border-collapse:collapse;background:#fff;font-size:.92rem}
+th,td{padding:8px 10px;text-align:left;border-bottom:1px solid var(--s);vertical-align:top}th{background:var(--s);color:var(--bd)}
+.toast{position:fixed;bottom:18px;left:50%;transform:translateX(-50%);background:var(--bd);color:#fff;padding:10px 18px;border-radius:99px;z-index:9;max-width:90%;text-align:center}
+footer{text-align:center;color:var(--mut);font-size:.8rem;padding:24px}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+
+/* Identidad visual de la biblioteca: cálida, escolar y ligera. */
+:root{--navy:#123c4a;--deep:#0b2733;--teal:#197c75;--mint:#dff3ee;--gold:#e9ad42;--coral:#d86b51;--paper:#fffdf8;--cream:#f5efe3;--line:#dce4df;--shadow:0 18px 48px rgba(18,60,74,.10)}
+html{scroll-behavior:smooth}body{background:radial-gradient(circle at 8% 9%,rgba(233,173,66,.16),transparent 24rem),radial-gradient(circle at 92% 17%,rgba(25,124,117,.12),transparent 25rem),var(--cream);font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;color:#203039}h1,h2,h3,.brand b{font-family:Georgia,"Times New Roman",serif;color:var(--deep)}
+header{padding:.85rem clamp(1rem,4vw,3.5rem);background:rgba(255,253,248,.93);border-bottom:1px solid rgba(18,60,74,.1);box-shadow:0 5px 18px rgba(18,60,74,.04);backdrop-filter:blur(12px)}.brand{gap:.8rem}.brand img{width:3.35rem;height:3.35rem;object-fit:contain;border-radius:1rem;background:#fff;box-shadow:0 5px 14px rgba(18,60,74,.12)}.brand b{font-size:1.08rem}.brand small{font-size:.78rem}.brand:after{content:"📚 Un libro también abre una puerta";display:inline-flex;align-items:center;gap:.4rem;margin-left:auto;padding:.45rem .75rem;border-radius:999px;color:var(--navy);background:var(--mint);font-size:.78rem;font-weight:700}
+button{min-height:2.55rem;border-radius:.75rem;background:var(--teal);font-weight:700;transition:transform .18s ease,background .18s ease,box-shadow .18s ease}button:hover{background:var(--navy);transform:translateY(-1px);box-shadow:0 7px 14px rgba(18,60,74,.13)}button.g{color:var(--navy);background:#edf3f0}button.g:hover{background:#dcebe5}.sm{min-height:2rem;padding:.4rem .7rem;border-radius:.6rem;font-size:.86rem}
+main{max-width:1120px;padding:clamp(1.2rem,4vw,3.5rem) 1rem 2.5rem}.hero{padding:.4rem 0 1.4rem}.hero-layout{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(19rem,.85fr);gap:clamp(1rem,4vw,4rem);align-items:center}.eyebrow{margin-bottom:.6rem;color:var(--teal);font-size:.8rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase}.hero h1{max-width:40rem;margin-bottom:.7rem;font-size:clamp(2.25rem,5vw,4.4rem);line-height:.98;letter-spacing:-.035em}.hero-copy{max-width:39rem;margin-bottom:1.25rem;color:var(--mut);font-size:1.08rem}.search-box{position:relative}.search-box label{display:block;margin-bottom:.45rem;color:var(--navy);font-size:.83rem;font-weight:800}.search-box input{font-size:1rem;padding:1rem 1.15rem 1rem 2.8rem;border:2px solid transparent;border-radius:1rem;box-shadow:var(--shadow)}.search-box input:focus{border-color:var(--gold);outline:none}.search-icon{position:absolute;left:1rem;bottom:.95rem;color:var(--teal);font-size:1.1rem}.filter-row{display:flex;align-items:center;gap:.7rem;flex-wrap:wrap;margin-top:.75rem}.filter-row select{width:auto;min-width:12rem}
+.hero-art{position:relative;min-height:18rem;overflow:hidden;border-radius:2rem;background:linear-gradient(145deg,#dff3ee 0%,#f8e7be 100%);box-shadow:var(--shadow)}.hero-art:before,.hero-art:after{position:absolute;border-radius:50%;content:"";background:rgba(255,255,255,.45)}.hero-art:before{width:10rem;height:10rem;right:-2.5rem;top:-2.8rem}.hero-art:after{width:6rem;height:6rem;left:-2rem;bottom:-2rem}.hero-art svg{position:absolute;inset:1.1rem;width:calc(100% - 2.2rem);height:calc(100% - 2.2rem)}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:.75rem;margin:1.2rem 0 1.4rem}.stat{padding:1rem 1.1rem;border:1px solid rgba(18,60,74,.09);border-radius:1rem;background:rgba(255,255,255,.68)}.stat strong{display:block;color:var(--navy);font-family:Georgia,serif;font-size:1.65rem;line-height:1}.stat span{display:block;margin-top:.3rem;color:var(--mut);font-size:.78rem}.section-heading{display:flex;align-items:end;justify-content:space-between;gap:1rem;margin:1.25rem 0 .75rem}.section-heading h2{margin-bottom:0;font-size:1.5rem}.section-heading p{margin-bottom:0;color:var(--mut);font-size:.9rem}
+.grid{gap:1rem}.card{padding:1.1rem;border:1px solid var(--line);border-radius:1.05rem;background:rgba(255,255,255,.87);box-shadow:0 8px 26px rgba(18,60,74,.05)}.book-card{display:flex;flex-direction:column;min-height:14rem;gap:.45rem;border-top:4px solid var(--teal);border-left:1px solid var(--line)}.book-card.reserve{border-top-color:var(--gold)}.book-card.loan{border-top-color:var(--coral)}.book-card h3{margin:.1rem 0 0;font-size:1.08rem;line-height:1.2}.book-card .book-footer{display:flex;align-items:end;justify-content:space-between;gap:.5rem;margin-top:auto;padding-top:.65rem}.book-card .publisher{color:var(--mut);font-size:.88rem}.status{display:inline-flex;align-items:center;gap:.35rem;width:fit-content;padding:.28rem .62rem;border-radius:999px;font-size:.78rem;font-weight:800}.status:before{width:.45rem;height:.45rem;border-radius:50%;content:"";background:currentColor}.status.available{color:#18745e;background:#def3e9}.status.reserved{color:#94680d;background:#fff1c9}.status.loaned{color:#a3483a;background:#fde2dc}
+.box{width:min(100%,31rem);margin:1.5rem auto;padding:clamp(1.25rem,4vw,2rem);border:1px solid var(--line);border-radius:1.25rem;background:rgba(255,255,255,.9);box-shadow:var(--shadow)}.box h2{margin-bottom:.35rem}.box label{color:var(--navy);font-weight:750}.box input,.box select{border:1px solid #c9d6d0;border-radius:.7rem}.box button[style*="width"]{min-height:2.7rem}.note{margin-top:1rem;padding:.8rem .95rem;border-left:4px solid var(--gold);border-radius:.55rem;color:#6d5316;background:#fff7dc;font-size:.88rem}
+.welcome-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:.8rem;margin-top:1.5rem}.welcome-strip article{padding:1rem;border-radius:1rem;background:rgba(255,255,255,.52)}.welcome-strip strong{display:block;margin-bottom:.25rem;color:var(--navy)}.welcome-strip p{margin:0;color:var(--mut);font-size:.86rem}.toast{border-radius:999px;background:var(--deep);box-shadow:var(--shadow)}
+@media(max-width:760px){.brand:after{display:none}.hero-layout{grid-template-columns:1fr}.hero-art{min-height:12rem}.stats,.welcome-strip{grid-template-columns:1fr}.stat{display:flex;align-items:baseline;justify-content:space-between}.stat span{margin-top:0}}
+</style>
+</head>
+<body>
+<header>
+<div class="brand" onclick="go('cat')"><img src="logo.jpg" alt="Logo del Colegio Técnico José Félix Restrepo"><span><b>Biblioteca José Félix Restrepo</b><small>Colegio Técnico José Félix Restrepo I.E.D. · Bogotá D.C.</small></span></div>
+<nav id="nav"></nav>
+</header>
+<main id="app"><p style="padding:20px">Cargando…</p></main>
+<footer>Biblioteca escolar · Consulta el catálogo, reserva y cuida los libros que compartimos.</footer>
+<script type="module" src="app.js"></script>
+</body>
+</html>
